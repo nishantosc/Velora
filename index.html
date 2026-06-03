@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Velora Boutique — Premium unstitched dress materials. Lawn, Chiffon, Silk, Cotton and more. Shop online and order via WhatsApp.">
+  <title>Velora — Unstitched Dress Materials</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .header.scrolled .nav { height: 60px; }
+    .header.scrolled { box-shadow: 0 2px 20px rgba(181,103,77,.15); }
+    .header .nav { transition: height .3s ease; }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================
+       HEADER
+       ========================================= -->
+  <header class="header">
+    <nav class="nav">
+      <!-- Logo -->
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-name">Velora</span>
+        <span class="nav__logo-tagline">Unstitched Collections</span>
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#collections" class="nav__link">Collections</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav__actions">
+        <button class="nav__cart-btn" onclick="openCart()" aria-label="Open cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+        <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================
+       HERO
+       ========================================= -->
+  <section class="hero" id="home">
+    <div class="hero__pattern"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__glow-2"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">New Collection 2024</p>
+      <h1 class="hero__title">
+        Dress in the<br>
+        <em>Fabric of Dreams</em>
+      </h1>
+      <p class="hero__subtitle">
+        Premium unstitched dress materials — crafted for elegance, worn for every occasion.
+      </p>
+      <div class="hero__ctas">
+        <a href="#collections" class="btn btn-primary">
+          <i class="fas fa-gem"></i> Explore Collection
+        </a>
+        <button class="btn btn-outline" onclick="openCart()">
+          <i class="fas fa-shopping-bag"></i> View Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <i class="fas fa-chevron-down"></i>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Pure Lawn Fabrics</span>
+      <span>Embroidered Chiffon</span>
+      <span>Banarasi Silk</span>
+      <span>Hand Block Cotton</span>
+      <span>Premium Georgette</span>
+      <span>Zari Border Suits</span>
+      <span>Pure Lawn Fabrics</span>
+      <span>Embroidered Chiffon</span>
+      <span>Banarasi Silk</span>
+      <span>Hand Block Cotton</span>
+      <span>Premium Georgette</span>
+      <span>Zari Border Suits</span>
+    </div>
+  </div>
+
+  <!-- =========================================
+       COLLECTIONS
+       ========================================= -->
+  <section id="collections">
+    <!-- Category Filter -->
+    <div class="categories">
+      <span class="categories__label">Browse by fabric</span>
+      <div class="categories__pills" id="category-pills"></div>
+    </div>
+
+    <!-- Products -->
+    <div class="section" id="products-section">
+      <div class="section-header">
+        <span class="section-header__eyebrow">Our Collections</span>
+        <h2 class="section-header__title">Curated <em>Fabric</em> Collections</h2>
+        <p class="section-header__desc">
+          Each piece is selected for its quality, finish, and beauty. Stitch it your way.
+        </p>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FEATURES STRIP
+       ========================================= -->
+  <div class="features-strip">
+    <div class="features-inner">
+      <div class="feature-item">
+        <div class="feature-item__icon"><i class="fas fa-certificate"></i></div>
+        <div>
+          <div class="feature-item__title">100% Authentic Fabrics</div>
+          <div class="feature-item__desc">Every piece sourced directly from trusted weavers and mills.</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon"><i class="fab fa-whatsapp"></i></div>
+        <div>
+          <div class="feature-item__title">WhatsApp Ordering</div>
+          <div class="feature-item__desc">Order directly via WhatsApp — quick, easy, and personal.</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon"><i class="fas fa-truck-fast"></i></div>
+        <div>
+          <div class="feature-item__title">Pan-India Delivery</div>
+          <div class="feature-item__desc">Safe & insured shipping to your doorstep across India.</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__icon"><i class="fas fa-gem"></i></div>
+        <div>
+          <div class="feature-item__title">Premium Quality</div>
+          <div class="feature-item__desc">Handpicked fabrics for the finest feel, drape, and finish.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================
+       ABOUT
+       ========================================= -->
+  <section id="about" class="about-section">
+    <div class="section">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-visual__bg">
+            <i class="fas fa-gem"></i>
+          </div>
+          <div class="about-visual__monogram">V</div>
+        </div>
+        <div class="about-text">
+          <span class="about-text__eyebrow">Our Story</span>
+          <h2 class="about-text__title">Where <em>Fabric</em><br>Meets Artistry</h2>
+          <p class="about-text__body">
+            Velora was born from a passion for exquisite Indian textiles. We believe every woman
+            deserves to drape herself in the finest fabrics — ones that tell a story of heritage,
+            craftsmanship, and timeless beauty.
+          </p>
+          <p class="about-text__body">
+            From delicate lawns to opulent silks, our curated collection brings you the very best
+            unstitched dress materials. Each piece is thoughtfully sourced from master weavers
+            and artisans across India.
+          </p>
+          <div class="about-stats">
+            <div>
+              <span class="about-stat__num">500+</span>
+              <span class="about-stat__label">Happy Customers</span>
+            </div>
+            <div>
+              <span class="about-stat__num">200+</span>
+              <span class="about-stat__label">Fabric Designs</span>
+            </div>
+            <div>
+              <span class="about-stat__num">8+</span>
+              <span class="about-stat__label">Fabric Types</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       WHATSAPP CTA
+       ========================================= -->
+  <section id="contact" class="whatsapp-cta">
+    <div class="whatsapp-cta__inner">
+      <div class="whatsapp-cta__icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <h2 class="whatsapp-cta__title">Order on WhatsApp</h2>
+      <p class="whatsapp-cta__desc">
+        Have questions or ready to order? Reach us directly — we're just one message away.
+        We reply within minutes.
+      </p>
+      <a href="https://wa.me/919810976296" target="_blank" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        Chat with Us
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Velora</div>
+        <div class="footer__brand-tag">Unstitched Collections</div>
+        <p class="footer__brand-desc">
+          Premium unstitched dress materials for the modern Indian woman.
+          Quality you can feel, elegance you can see.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer__heading">Quick Links</div>
+        <ul class="footer__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__heading">Fabrics</div>
+        <ul class="footer__links">
+          <li><a href="#collections" onclick="setCategory('Lawn')">Lawn</a></li>
+          <li><a href="#collections" onclick="setCategory('Chiffon')">Chiffon</a></li>
+          <li><a href="#collections" onclick="setCategory('Silk')">Silk</a></li>
+          <li><a href="#collections" onclick="setCategory('Cotton')">Cotton</a></li>
+          <li><a href="#collections" onclick="setCategory('Georgette')">Georgette</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__heading">Contact Us</div>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong><br>
+              <a href="https://wa.me/919810976296" target="_blank">+91 98109 76296</a>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Hours</strong><br>
+              Mon–Sat: 10am – 8pm
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-truck-fast"></i>
+            <div>
+              <strong>Delivery</strong><br>
+              Pan-India Shipping
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; 2024 Velora Boutique. Made with <span style="color:var(--primary)">♥</span> for fabric lovers.
+      </p>
+      <a href="admin.html" class="footer__admin-link">
+        <i class="fas fa-lock"></i> Admin
+      </a>
+    </div>
+  </footer>
+
+  <!-- =========================================
+       CART DRAWER
+       ========================================= -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-label="Shopping cart">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">
+        <i class="fas fa-shopping-bag"></i>
+        Your Bag
+        <span id="cart-count-label">0</span>
+      </h2>
+      <button class="cart-close" onclick="closeCart()" aria-label="Close cart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer__body" id="cart-body">
+      <!-- Rendered by JS -->
+    </div>
+
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none">
+      <div class="cart-summary">
+        <div class="cart-summary__row">
+          <span>Subtotal</span>
+          <span id="cart-total">₹0</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>Shipping</span>
+          <span style="color:var(--primary);font-weight:600">On Inquiry</span>
+        </div>
+        <div class="cart-summary__total">
+          <span>Total</span>
+          <span class="price" id="cart-total-footer">₹0</span>
+        </div>
+      </div>
+
+      <button class="cart-checkout-btn" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        Order via WhatsApp
+      </button>
+      <button class="cart-clear-btn" onclick="if(confirm('Clear your cart?'))clearCart()">
+        <i class="fas fa-trash"></i> Clear Cart
+      </button>
+    </div>
+  </aside>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919810976296" target="_blank" class="fab-whatsapp" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script>
+    // Sync both total displays
+    const origRenderCart = renderCart;
+    window.renderCart = function() {
+      origRenderCart();
+      const t = '₹' + cartTotal().toLocaleString('en-IN');
+      const el = document.getElementById('cart-total-footer');
+      if (el) el.textContent = t;
+    };
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      window.renderCart();
+    });
+  </script>
+</body>
+</html>
