@@ -12,10 +12,10 @@ const STORAGE_KEY = 'weave_katha_products';
 /* ——— Default Products ——— */
 const DEFAULT_PRODUCTS = [
   {
-    id: '1', name: 'Zari Border Lawn Suit', category: 'Lawn',
-    price: 2200, originalPrice: 2800,
-    fabric: 'Pure Lawn', pieces: '3 Piece',
-    description: 'Exquisite zari border work on soft lawn fabric. Perfect for festive occasions.',
+    id: '1', name: 'Kota Doria Zari Suit', category: 'Kota',
+    price: 2400, originalPrice: 3100,
+    fabric: 'Kota Doria', pieces: '3 Piece',
+    description: 'Airy Kota Doria weave with a festive zari border and soft drape.',
     image: '', badge: 'new', inStock: true
   },
   {
@@ -26,10 +26,10 @@ const DEFAULT_PRODUCTS = [
     image: '', badge: '', inStock: true
   },
   {
-    id: '3', name: 'Embroidered Chiffon Set', category: 'Chiffon',
-    price: 4500, originalPrice: 5500,
-    fabric: 'Pure Chiffon', pieces: '3 Piece',
-    description: 'Delicate chiffon with fine thread embroidery. Ideal for weddings and parties.',
+    id: '3', name: 'Jamdani Motif Set', category: 'Jamdani',
+    price: 4600, originalPrice: 5600,
+    fabric: 'Handwoven Jamdani', pieces: '3 Piece',
+    description: 'Fine Jamdani motifs on a graceful unstitched set for special occasions.',
     image: '', badge: 'hot', inStock: true
   },
   {
@@ -47,10 +47,10 @@ const DEFAULT_PRODUCTS = [
     image: '', badge: '', inStock: true
   },
   {
-    id: '6', name: 'Kantha Work Linen', category: 'Linen',
-    price: 2600, originalPrice: 3200,
-    fabric: 'Premium Linen', pieces: '2 Piece',
-    description: 'Breathable linen with traditional Kantha embroidery. Casual elegance.',
+    id: '6', name: 'Tussar Kantha Set', category: 'Tussar',
+    price: 3600, originalPrice: 4400,
+    fabric: 'Tussar Silk Blend', pieces: '2 Piece',
+    description: 'Textured Tussar blend finished with artisanal Kantha-inspired detailing.',
     image: '', badge: 'new', inStock: true
   },
   {
@@ -187,8 +187,8 @@ function openWhatsApp() {
    ============================================ */
 function categoryColor(cat) {
   const map = {
-    Lawn: '#6dbf67', Cotton: '#e67e22', Chiffon: '#9b59b6',
-    Silk: '#c0392b', Georgette: '#3498db', Linen: '#8e6b2b', Embroidered: '#d35400'
+    Kota: '#AA1C41', Cotton: '#e67e22', Tussar: '#b9770e',
+    Silk: '#c0392b', Georgette: '#3498db', Jamdani: '#8e44ad', Embroidered: '#d35400'
   };
   return map[cat] || '#B5674D';
 }
@@ -212,14 +212,13 @@ function productCardHTML(p) {
     <div class="product-card__img-wrap">
       ${imgHTML}
       ${badgeHTML}
-      <button class="product-card__wish" title="Wishlist"><i class="far fa-heart"></i></button>
     </div>
     <div class="product-card__body">
       <span class="product-card__category">${escapeHtml(p.category)}</span>
       <h3 class="product-card__name">${escapeHtml(p.name)}</h3>
       <div class="product-card__meta">
-        ${p.fabric ? `<span><i class="fas fa-circle-dot" style="color:${categoryColor(p.category)};font-size:.5rem"></i>${escapeHtml(p.fabric)}</span>` : ''}
-        ${p.pieces ? `<span><i class="fas fa-layer-group" style="font-size:.6rem;color:var(--text-3)"></i>${escapeHtml(p.pieces)}</span>` : ''}
+        ${p.fabric ? `<span class="product-card__fabric"><i class="fas fa-circle-dot" style="color:${categoryColor(p.category)};font-size:.5rem"></i>${escapeHtml(p.fabric)}</span>` : ''}
+        ${p.pieces ? `<span class="product-card__pieces"><i class="fas fa-layer-group" style="font-size:.6rem"></i>${escapeHtml(p.pieces)}</span>` : ''}
       </div>
       <div class="product-card__price-row">
         <div class="product-card__price">
@@ -407,13 +406,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeCart();
   });
 
-  /* Wishlist heart toggle */
-  document.addEventListener('click', e => {
-    const btn = e.target.closest('.product-card__wish');
-    if (!btn) return;
-    const icon = btn.querySelector('i');
-    icon.classList.toggle('far');
-    icon.classList.toggle('fas');
-    btn.style.color = icon.classList.contains('fas') ? '#e74c3c' : '';
-  });
 });

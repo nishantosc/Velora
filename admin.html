@@ -228,8 +228,8 @@
       border:1.5px solid var(--border); background:var(--white); color:var(--text-2);
     }
     .badge-opt.active { border-color:var(--primary); background:var(--primary); color:var(--white); }
-    .badge-opt[data-v="new"].active   { background:#B5674D; border-color:#B5674D; }
-    .badge-opt[data-v="sale"].active  { background:var(--gold); border-color:var(--gold); }
+    .badge-opt[data-v="new"].active   { background:#1daa52; border-color:#1daa52; }
+    .badge-opt[data-v="sale"].active  { background:#FF8C00; border-color:#FF8C00; }
     .badge-opt[data-v="hot"].active   { background:#c0392b; border-color:#c0392b; }
 
     .toggle-row {
@@ -466,7 +466,7 @@
 
             <div class="field">
               <label>Product Name <span>*</span></label>
-              <input type="text" id="f-name" placeholder="e.g. Embroidered Lawn Suit">
+              <input type="text" id="f-name" placeholder="e.g. Jamdani Woven Suit">
             </div>
 
             <div class="field-row">
@@ -474,18 +474,18 @@
                 <label>Category <span>*</span></label>
                 <select id="f-category">
                   <option value="">Select...</option>
-                  <option>Lawn</option>
+                  <option>Kota</option>
                   <option>Cotton</option>
-                  <option>Chiffon</option>
+                  <option>Tussar</option>
                   <option>Silk</option>
                   <option>Georgette</option>
-                  <option>Linen</option>
+                  <option>Jamdani</option>
                   <option>Embroidered</option>
                 </select>
               </div>
               <div class="field">
                 <label>Fabric Type</label>
-                <input type="text" id="f-fabric" placeholder="e.g. Pure Lawn">
+                <input type="text" id="f-fabric" placeholder="e.g. Kota Doria">
               </div>
             </div>
 
@@ -610,12 +610,12 @@
 
   /* ——— Default Products (fallback) ——— */
   const DEFAULT_PRODUCTS = [
-    { id:'1', name:'Zari Border Lawn Suit', category:'Lawn', price:2200, originalPrice:2800, fabric:'Pure Lawn', pieces:'3 Piece', description:'Exquisite zari border work on soft lawn fabric.', image:'', badge:'new', inStock:true },
+    { id:'1', name:'Kota Doria Zari Suit', category:'Kota', price:2400, originalPrice:3100, fabric:'Kota Doria', pieces:'3 Piece', description:'Airy Kota Doria weave with a festive zari border.', image:'', badge:'new', inStock:true },
     { id:'2', name:'Hand Block Print Cotton', category:'Cotton', price:1800, originalPrice:0, fabric:'Pure Cotton', pieces:'3 Piece', description:'Traditional hand block printed cotton fabric.', image:'', badge:'', inStock:true },
-    { id:'3', name:'Embroidered Chiffon Set', category:'Chiffon', price:4500, originalPrice:5500, fabric:'Pure Chiffon', pieces:'3 Piece', description:'Delicate chiffon with fine thread embroidery.', image:'', badge:'hot', inStock:true },
+    { id:'3', name:'Jamdani Motif Set', category:'Jamdani', price:4600, originalPrice:5600, fabric:'Handwoven Jamdani', pieces:'3 Piece', description:'Fine Jamdani motifs on a graceful unstitched set.', image:'', badge:'hot', inStock:true },
     { id:'4', name:'Silk Dupatta Suit', category:'Silk', price:5800, originalPrice:7000, fabric:'Pure Silk', pieces:'3 Piece', description:'Luxurious silk fabric with matching silk dupatta.', image:'', badge:'sale', inStock:true },
     { id:'5', name:'Georgette Party Wear', category:'Georgette', price:3200, originalPrice:4000, fabric:'Georgette', pieces:'3 Piece', description:'Flowing georgette with sequin embellishments.', image:'', badge:'', inStock:true },
-    { id:'6', name:'Kantha Work Linen', category:'Linen', price:2600, originalPrice:3200, fabric:'Premium Linen', pieces:'2 Piece', description:'Breathable linen with traditional Kantha embroidery.', image:'', badge:'new', inStock:true },
+    { id:'6', name:'Tussar Kantha Set', category:'Tussar', price:3600, originalPrice:4400, fabric:'Tussar Silk Blend', pieces:'2 Piece', description:'Textured Tussar blend with artisanal detailing.', image:'', badge:'new', inStock:true },
     { id:'7', name:'Phulkari Cotton Dupatta', category:'Cotton', price:1500, originalPrice:0, fabric:'Cotton', pieces:'2 Piece', description:'Vibrant Phulkari embroidery on soft cotton.', image:'', badge:'', inStock:true },
     { id:'8', name:'Banarasi Silk Saree Suit', category:'Silk', price:8500, originalPrice:10500, fabric:'Banarasi Silk', pieces:'3 Piece', description:'Opulent Banarasi weave with gold zari.', image:'', badge:'hot', inStock:true }
   ];

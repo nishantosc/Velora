@@ -87,7 +87,7 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 600;
-  color: #FF8C00;
+  color: #FFD23F;
   letter-spacing: 0.08em;
 }
 .nav__logo-tagline {
@@ -196,7 +196,7 @@ input, textarea, select { font-family: inherit; }
   background-image: url('https://github.com/nishantosc/Velora/blob/main/dynamic.gif?raw=true');
   background-position: center;
   background-size: cover;
-  opacity: .48;
+  opacity: .62;
   transform: scale(1.02);
 }
 
@@ -251,7 +251,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #ff1a1a;
+  color: var(--white);
   font-weight: 600;
   margin-bottom: 20px;
   text-shadow: 0 2px 18px rgba(0,0,0,.85);
@@ -259,7 +259,7 @@ input, textarea, select { font-family: inherit; }
 .hero__eyebrow::before, .hero__eyebrow::after {
   content: '';
   width: 30px; height: 1px;
-  background: #ff1a1a;
+  background: var(--white);
   opacity: .85;
 }
 
@@ -284,7 +284,7 @@ input, textarea, select { font-family: inherit; }
 
 .hero__subtitle {
   font-size: clamp(1rem, 2vw, 1.4rem);
-  color: #ff1a1a;
+  color: var(--white);
   font-weight: 700;
   margin-bottom: 40px;
   max-width: 500px;
@@ -312,25 +312,25 @@ input, textarea, select { font-family: inherit; }
   border: 2px solid transparent;
 }
 .btn-primary {
-  background: var(--primary);
-  color: var(--white);
-  border-color: var(--primary);
-  box-shadow: 0 4px 20px rgba(181,103,77,.4);
+  background: #FFD23F;
+  color: var(--text);
+  border-color: #FFD23F;
+  box-shadow: 0 4px 20px rgba(255,210,63,.38);
 }
 .btn-primary:hover {
-  background: var(--primary-h);
-  border-color: var(--primary-h);
+  background: #FFB000;
+  border-color: #FFB000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(181,103,77,.5);
+  box-shadow: 0 8px 28px rgba(255,176,0,.42);
 }
 .btn-outline {
-  background: transparent;
-  color: var(--white);
-  border-color: rgba(255,255,255,.4);
+  background: #FFD23F;
+  color: var(--text);
+  border-color: #FFD23F;
 }
 .btn-outline:hover {
-  background: rgba(255,255,255,.1);
-  border-color: var(--white);
+  background: #FFB000;
+  border-color: #FFB000;
   transform: translateY(-2px);
 }
 .btn-gold {
@@ -373,7 +373,7 @@ input, textarea, select { font-family: inherit; }
 
 /* ——— Marquee Banner ——— */
 .marquee-wrap {
-  background: var(--primary);
+  background: #AA1C41;
   overflow: hidden;
   padding: 10px 0;
 }
@@ -386,7 +386,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 0.72rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.9);
+  color: var(--white);
   font-weight: 600;
   padding: 0 32px;
   white-space: nowrap;
@@ -394,7 +394,7 @@ input, textarea, select { font-family: inherit; }
 .marquee-track span::before {
   content: '✦';
   margin-right: 32px;
-  color: var(--gold-l);
+  color: var(--white);
 }
 
 @keyframes marquee {
@@ -411,6 +411,11 @@ input, textarea, select { font-family: inherit; }
   padding: 80px 24px;
 }
 
+#collections {
+  background:
+    radial-gradient(ellipse at center, rgba(255,255,255,.98) 0%, rgba(255,255,255,.88) 34%, rgba(255,255,255,.5) 52%, rgba(170,28,65,.88) 78%, #3b0614 100%);
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 56px;
@@ -420,9 +425,10 @@ input, textarea, select { font-family: inherit; }
   font-size: 0.68rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--white);
   font-weight: 700;
   margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.48);
 }
 .section-header__title {
   font-family: var(--font-serif);
@@ -434,14 +440,15 @@ input, textarea, select { font-family: inherit; }
 }
 .section-header__title em {
   font-style: italic;
-  color: var(--primary);
+  color: #ff0000;
 }
 .section-header__desc {
   font-size: 1rem;
-  color: var(--text-3);
+  color: var(--white);
   max-width: 500px;
   margin: 0 auto;
   font-weight: 400;
+  text-shadow: 0 2px 12px rgba(0,0,0,.48);
 }
 
 /* ============================================
@@ -456,10 +463,11 @@ input, textarea, select { font-family: inherit; }
   font-size: 0.7rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: var(--white);
   font-weight: 700;
   margin-bottom: 16px;
   display: block;
+  text-shadow: 0 2px 12px rgba(0,0,0,.48);
 }
 .categories__pills {
   display: flex;
@@ -469,8 +477,8 @@ input, textarea, select { font-family: inherit; }
 .pill {
   padding: 9px 22px;
   border-radius: 99px;
-  border: 1.5px solid var(--border-2);
-  background: var(--surface);
+  border: 1.5px solid #FFD23F;
+  background: #FFD23F;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-2);
@@ -478,9 +486,9 @@ input, textarea, select { font-family: inherit; }
   transition: var(--transition);
 }
 .pill:hover, .pill.active {
-  background: var(--primary);
-  color: var(--white);
-  border-color: var(--primary);
+  background: #FFB000;
+  color: var(--text);
+  border-color: #FFB000;
   box-shadow: var(--shadow-sm);
   transform: translateY(-1px);
 }
@@ -555,29 +563,9 @@ input, textarea, select { font-family: inherit; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.badge-new { background: var(--primary); color: var(--white); }
-.badge-sale { background: var(--gold); color: var(--white); }
+.badge-new { background: #1daa52; color: var(--white); }
+.badge-sale { background: #FF8C00; color: var(--white); }
 .badge-hot { background: #c0392b; color: var(--white); }
-
-.product-card__wish {
-  position: absolute;
-  top: 12px; right: 12px;
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,.9);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem;
-  color: var(--text-3);
-  transition: var(--transition);
-  backdrop-filter: blur(4px);
-  opacity: 0;
-  transform: scale(0.8);
-}
-.product-card:hover .product-card__wish {
-  opacity: 1;
-  transform: scale(1);
-}
-.product-card__wish:hover { color: #e74c3c; background: var(--white); }
 
 .product-card__body {
   padding: 18px 20px 20px;
@@ -590,7 +578,7 @@ input, textarea, select { font-family: inherit; }
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: #ff0000;
   font-weight: 700;
 }
 .product-card__name {
@@ -607,6 +595,7 @@ input, textarea, select { font-family: inherit; }
   gap: 12px;
   flex-wrap: wrap;
 }
+.product-card__pieces { color: #ff0000; font-weight: 700; }
 .product-card__meta span {
   display: flex;
   align-items: center;
@@ -630,19 +619,19 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-serif);
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--primary);
+  color: #ff0000;
 }
 .price-original {
   font-size: 0.85rem;
-  color: var(--text-3);
+  color: #ff0000;
   text-decoration: line-through;
 }
 
 .btn-add-cart {
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: var(--primary);
-  color: var(--white);
+  background: #FFD23F;
+  color: var(--text);
   display: flex; align-items: center; justify-content: center;
   font-size: 0.95rem;
   transition: var(--transition);
@@ -650,7 +639,7 @@ input, textarea, select { font-family: inherit; }
   flex-shrink: 0;
 }
 .btn-add-cart:hover {
-  background: var(--primary-h);
+  background: #FFB000;
   transform: scale(1.12) rotate(8deg);
   box-shadow: var(--shadow);
 }
@@ -679,7 +668,7 @@ input, textarea, select { font-family: inherit; }
    FEATURES STRIP
    ============================================ */
 .features-strip {
-  background: var(--text);
+  background: #AA1C41;
   padding: 48px 24px;
 }
 .features-inner {
@@ -693,7 +682,7 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  color: rgba(255,255,255,.85);
+  color: var(--white);
 }
 .feature-item__icon {
   width: 48px; height: 48px;
@@ -713,7 +702,7 @@ input, textarea, select { font-family: inherit; }
 }
 .feature-item__desc {
   font-size: 0.78rem;
-  color: rgba(255,255,255,.5);
+  color: var(--white);
   line-height: 1.5;
 }
 
