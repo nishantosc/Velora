@@ -1,13 +1,13 @@
 /* ============================================
-   VELORA BOUTIQUE — Main Application
+   WEAVE KATHA BOUTIQUE — Main Application
    ============================================ */
 
 'use strict';
 
 /* ——— Constants ——— */
 const WA_NUMBER = '919810976296';
-const ADMIN_PASS = 'Velora@2024';
-const STORAGE_KEY = 'velora_products';
+const ADMIN_PASS = 'Weave Katha@2024';
+const STORAGE_KEY = 'weave_katha_products';
 
 /* ——— Default Products ——— */
 const DEFAULT_PRODUCTS = [
@@ -92,12 +92,12 @@ function saveProducts() {
 
 function loadCart() {
   try {
-    cart = JSON.parse(localStorage.getItem('velora_cart') || '[]');
+    cart = JSON.parse(localStorage.getItem('weave_katha_cart') || '[]');
   } catch { cart = []; }
 }
 
 function saveCart() {
-  localStorage.setItem('velora_cart', JSON.stringify(cart));
+  localStorage.setItem('weave_katha_cart', JSON.stringify(cart));
 }
 
 /* ============================================
@@ -158,7 +158,7 @@ function cartItemCount() {
    WHATSAPP ORDER
    ============================================ */
 function buildWhatsAppMessage() {
-  const lines = ['Hello *Velora Boutique!* 🛍️', '', "I'd like to place an order:", ''];
+  const lines = ['Hello *Weave Katha Boutique!* 🛍️', '', "I'd like to place an order:", ''];
   cart.forEach((item, i) => {
     const p = products.find(x => x.id === item.id);
     if (!p) return;
