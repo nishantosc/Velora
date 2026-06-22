@@ -62,10 +62,9 @@ input, textarea, select { font-family: inherit; }
   position: sticky;
   top: 0;
   z-index: 900;
-  background: rgba(255,249,245,.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  background: #AA1C41;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 8px 28px rgba(170,28,65,.26);
 }
 
 .nav {
@@ -88,14 +87,14 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 600;
-  color: var(--primary);
+  color: #FF8C00;
   letter-spacing: 0.08em;
 }
 .nav__logo-tagline {
   font-size: 0.6rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -109,7 +108,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-2);
+  color: var(--white);
   position: relative;
   transition: var(--transition);
 }
@@ -118,11 +117,11 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   bottom: -3px; left: 0;
   width: 0; height: 2px;
-  background: var(--primary);
+  background: #FF8C00;
   border-radius: 99px;
   transition: width .3s var(--ease);
 }
-.nav__link:hover { color: var(--primary); }
+.nav__link:hover { color: #FF8C00; }
 .nav__link:hover::after { width: 100%; }
 
 .nav__actions {
@@ -135,17 +134,17 @@ input, textarea, select { font-family: inherit; }
   position: relative;
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: var(--surface-2);
+  background: rgba(255,255,255,.14);
   display: flex; align-items: center; justify-content: center;
   transition: var(--transition);
-  border: 1px solid var(--border);
-  color: var(--text-2);
+  border: 1px solid rgba(255,255,255,.28);
+  color: var(--white);
   font-size: 1.1rem;
 }
 .nav__cart-btn:hover {
-  background: var(--primary);
+  background: #FF8C00;
   color: var(--white);
-  border-color: var(--primary);
+  border-color: #FF8C00;
   transform: scale(1.05);
 }
 
@@ -153,14 +152,14 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   top: -4px; right: -4px;
   min-width: 20px; height: 20px;
-  background: var(--primary);
+  background: #FF8C00;
   color: var(--white);
   font-size: 0.65rem;
   font-weight: 700;
   border-radius: 99px;
   display: flex; align-items: center; justify-content: center;
   padding: 0 5px;
-  border: 2px solid var(--bg);
+  border: 2px solid #AA1C41;
   display: none;
 }
 .cart-badge.visible { display: flex; }
@@ -173,7 +172,7 @@ input, textarea, select { font-family: inherit; }
 }
 .hamburger span {
   width: 22px; height: 2px;
-  background: var(--text);
+  background: var(--white);
   border-radius: 99px;
   transition: var(--transition);
 }
@@ -197,7 +196,7 @@ input, textarea, select { font-family: inherit; }
   background-image: url('https://github.com/nishantosc/Velora/blob/main/dynamic.gif?raw=true');
   background-position: center;
   background-size: cover;
-  opacity: .78;
+  opacity: .18;
   transform: scale(1.02);
 }
 
@@ -206,21 +205,10 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 22% 45%, rgba(255, 0, 0, .28), transparent 34%),
-    linear-gradient(90deg, rgba(0,0,0,.76) 0%, rgba(0,0,0,.48) 44%, rgba(0,0,0,.2) 100%),
-    linear-gradient(180deg, rgba(0,0,0,.32) 0%, rgba(0,0,0,.18) 50%, rgba(0,0,0,.58) 100%);
+    radial-gradient(circle at 20% 45%, rgba(170,28,65,.38), transparent 34%),
+    linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.72) 48%, rgba(0,0,0,.58) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.56) 0%, rgba(0,0,0,.48) 50%, rgba(0,0,0,.78) 100%);
   pointer-events: none;
-}
-
-.hero__pattern {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.12;
-  background-image:
-    repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%),
-    repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%);
-  background-size: 24px 24px;
 }
 
 .hero__glow {
@@ -250,15 +238,10 @@ input, textarea, select { font-family: inherit; }
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  margin-left: max(24px, calc((100% - 1280px) / 2 + 24px));
-  margin-right: 24px;
-  padding: clamp(32px, 5vw, 64px);
-  border: 1px solid rgba(255,255,255,.28);
-  border-radius: 32px;
-  background: linear-gradient(135deg, rgba(255,255,255,.26), rgba(255,255,255,.1));
-  box-shadow: 0 28px 90px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.22);
-  backdrop-filter: blur(10px) saturate(1.25);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  width: 100%;
 }
 
 .hero__eyebrow {
@@ -1316,10 +1299,10 @@ input, textarea, select { font-family: inherit; }
     flex-direction: column;
     position: absolute;
     top: 72px; left: 0; right: 0;
-    background: var(--bg);
+    background: #AA1C41;
     padding: 20px 24px;
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 16px 32px rgba(170,28,65,.28);
     gap: 16px;
   }
   .hero__ctas { flex-direction: column; align-items: flex-start; }
