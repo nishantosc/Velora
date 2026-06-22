@@ -1,5 +1,5 @@
 /* ============================================
-   VELORA BOUTIQUE — Main Stylesheet
+   WEAVE KATHA BOUTIQUE — Main Stylesheet
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap');
@@ -62,10 +62,9 @@ input, textarea, select { font-family: inherit; }
   position: sticky;
   top: 0;
   z-index: 900;
-  background: rgba(255,249,245,.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  background: #AA1C41;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 8px 28px rgba(170,28,65,.26);
 }
 
 .nav {
@@ -88,14 +87,14 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 600;
-  color: var(--primary);
+  color: #FF8C00;
   letter-spacing: 0.08em;
 }
 .nav__logo-tagline {
   font-size: 0.6rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--text-3);
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -109,7 +108,7 @@ input, textarea, select { font-family: inherit; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-2);
+  color: var(--white);
   position: relative;
   transition: var(--transition);
 }
@@ -118,11 +117,11 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   bottom: -3px; left: 0;
   width: 0; height: 2px;
-  background: var(--primary);
+  background: #FF8C00;
   border-radius: 99px;
   transition: width .3s var(--ease);
 }
-.nav__link:hover { color: var(--primary); }
+.nav__link:hover { color: #FF8C00; }
 .nav__link:hover::after { width: 100%; }
 
 .nav__actions {
@@ -135,17 +134,17 @@ input, textarea, select { font-family: inherit; }
   position: relative;
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: var(--surface-2);
+  background: rgba(255,255,255,.14);
   display: flex; align-items: center; justify-content: center;
   transition: var(--transition);
-  border: 1px solid var(--border);
-  color: var(--text-2);
+  border: 1px solid rgba(255,255,255,.28);
+  color: var(--white);
   font-size: 1.1rem;
 }
 .nav__cart-btn:hover {
-  background: var(--primary);
+  background: #FF8C00;
   color: var(--white);
-  border-color: var(--primary);
+  border-color: #FF8C00;
   transform: scale(1.05);
 }
 
@@ -153,14 +152,14 @@ input, textarea, select { font-family: inherit; }
   position: absolute;
   top: -4px; right: -4px;
   min-width: 20px; height: 20px;
-  background: var(--primary);
+  background: #FF8C00;
   color: var(--white);
   font-size: 0.65rem;
   font-weight: 700;
   border-radius: 99px;
   display: flex; align-items: center; justify-content: center;
   padding: 0 5px;
-  border: 2px solid var(--bg);
+  border: 2px solid #AA1C41;
   display: none;
 }
 .cart-badge.visible { display: flex; }
@@ -173,7 +172,7 @@ input, textarea, select { font-family: inherit; }
 }
 .hamburger span {
   width: 22px; height: 2px;
-  background: var(--text);
+  background: var(--white);
   border-radius: 99px;
   transition: var(--transition);
 }
@@ -187,32 +186,46 @@ input, textarea, select { font-family: inherit; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #1C1008 0%, #3D1E10 40%, #6B3020 70%, #B5674D 100%);
+  background: #080202;
 }
 
-.hero__pattern {
+.hero::before {
+  content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.06;
-  background-image:
-    repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%),
-    repeating-linear-gradient(-45deg, #fff 0, #fff 1px, transparent 0, transparent 50%);
-  background-size: 24px 24px;
+  background-image: url('https://github.com/nishantosc/Velora/blob/main/dynamic.gif?raw=true');
+  background-position: center;
+  background-size: cover;
+  opacity: .48;
+  transform: scale(1.02);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 45%, rgba(170,28,65,.26), transparent 35%),
+    linear-gradient(90deg, rgba(0,0,0,.68) 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.18) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,.18) 50%, rgba(0,0,0,.54) 100%);
+  pointer-events: none;
 }
 
 .hero__glow {
   position: absolute;
+  z-index: 1;
   width: 600px; height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,169,106,.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,0,0,.32) 0%, transparent 70%);
   top: -100px; right: -100px;
   animation: glow-float 6s ease-in-out infinite;
 }
 .hero__glow-2 {
   position: absolute;
+  z-index: 1;
   width: 400px; height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(181,103,77,.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,.18) 0%, transparent 68%);
   bottom: -50px; left: 10%;
   animation: glow-float 8s ease-in-out infinite reverse;
 }
@@ -224,7 +237,7 @@ input, textarea, select { font-family: inherit; }
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 24px;
@@ -238,37 +251,45 @@ input, textarea, select { font-family: inherit; }
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #ff1a1a;
   font-weight: 600;
   margin-bottom: 20px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.85);
 }
 .hero__eyebrow::before, .hero__eyebrow::after {
   content: '';
   width: 30px; height: 1px;
-  background: var(--gold);
-  opacity: .6;
+  background: #ff1a1a;
+  opacity: .85;
 }
 
 .hero__title {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 300;
-  color: var(--white);
+  font-weight: 700;
+  color: #ff0000;
   line-height: 1.1;
   margin-bottom: 12px;
+  max-width: 760px;
+  text-shadow:
+    0 2px 0 rgba(255,255,255,.2),
+    0 4px 0 rgba(0,0,0,.62),
+    0 10px 30px rgba(0,0,0,.95),
+    0 0 38px rgba(255,0,0,.62);
 }
 .hero__title em {
   font-style: italic;
-  color: var(--gold);
+  color: #ff0000;
 }
 
 .hero__subtitle {
   font-size: clamp(1rem, 2vw, 1.4rem);
-  color: rgba(255,255,255,.7);
-  font-weight: 300;
+  color: #ff1a1a;
+  font-weight: 700;
   margin-bottom: 40px;
   max-width: 500px;
   letter-spacing: 0.02em;
+  text-shadow: 0 2px 0 rgba(0,0,0,.72), 0 6px 22px rgba(0,0,0,.95), 0 0 22px rgba(255,0,0,.42);
 }
 
 .hero__ctas {
@@ -1280,10 +1301,10 @@ input, textarea, select { font-family: inherit; }
     flex-direction: column;
     position: absolute;
     top: 72px; left: 0; right: 0;
-    background: var(--bg);
+    background: #AA1C41;
     padding: 20px 24px;
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 16px 32px rgba(170,28,65,.28);
     gap: 16px;
   }
   .hero__ctas { flex-direction: column; align-items: flex-start; }
